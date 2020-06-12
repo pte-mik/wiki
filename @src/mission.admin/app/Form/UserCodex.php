@@ -29,7 +29,7 @@ class UserCodex extends UserHelper{
 		$form->addJSPlugin('FormButtonSave');
 		$form->addJSPlugin('FormButtonDelete', 'FormButtonReload', 'FormButtonFiles');
 		$form->setItemDataImporter(new class implements ItemDataImporterInterface{
-			public function importItemData($item, $data){
+			public function importItemData(User $item, $data){
 				/** @var \Application\Ghost\User $item */
 				$item->import($data);
 				if ($data['newpassword']) $item->password = $data['newpassword'];
