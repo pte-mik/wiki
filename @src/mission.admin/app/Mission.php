@@ -25,6 +25,7 @@ class Mission extends CodexMission{
 
 	public function setup($config){
 		parent::setup($config);
+		$this->title = "MIK Wiki Admin";
 		ServiceContainer::shared(AuthServiceInterface::class, AuthService::class);
 		ServiceContainer::shared(CodexWhoAmIInterface::class, CodexWhoAmI::class);
 	}
